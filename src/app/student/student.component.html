@@ -1,0 +1,19 @@
+<div class="object-container">
+  <h2>Students</h2>
+  <button mat-raised-button color="primary" (click)="openAddDialog()">Add student</button>
+  <ul *ngIf="students">
+    <li *ngFor="let student of students">
+      <h2 class="student-name">name | {{ student.name }}</h2>
+      <span class="age">age | {{ student.age }} </span>
+      <span class="year">year | {{ student.year }} </span>
+      <button mat-icon-button color="primary" aria-label="Example icon-button with a edit icon"
+        (click)="openUpdateDialog(student.student_id)">
+        <mat-icon>mode_edit</mat-icon>
+      </button>
+      <button mat-icon-button color="primary" aria-label="Example icon-button with a delete icon"
+        (click)="deleteElement(student.student_id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </li>
+  </ul>
+</div>

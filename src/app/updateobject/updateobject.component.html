@@ -1,0 +1,70 @@
+<h2 mat-dialog-title>Update {{ data.type }}</h2>
+<form *ngIf="data.type === 'student'" class="update-object-form" #updateObjectForm="ngForm"
+  (ngSubmit)="onUpdateClick(updateObjectForm.value)">
+  <mat-dialog-content>
+    <mat-form-field class="update-object-full-width"><input type="text" matInput placeholder="name" name="name" ngModel>
+    </mat-form-field>
+    <mat-form-field class="update-object-full-width"><input type="number" matInput placeholder="age" name="age" ngModel>
+    </mat-form-field>
+    <mat-form-field class="update-object-full-width"><input type="number" matInput placeholder="year" name="year"
+        ngModel>
+    </mat-form-field>
+    <mat-form-field class="update-object-full-width"><input type="text" matInput placeholder="class id" name="class_id"
+        ngModel>
+    </mat-form-field>
+    <mat-form-field class="update-object-full-width"><input type="text" matInput placeholder="course id"
+        name="course_id" ngModel>
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button type="submit">Add</button>
+    <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+    <button mat-button [mat-dialog-close]="true">Cancel</button>
+  </mat-dialog-actions>
+</form>
+
+<form *ngIf="data.type === 'class'" class="update-object-form" #updateObjectForm="ngForm"
+  (ngSubmit)="onUpdateClick(updateObjectForm.value)">
+  <mat-dialog-content>
+    <mat-form-field class="update-object-full-width"><input type="number" matInput placeholder="floor number"
+        name="floor_number" ngModel></mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button type="submit">Add</button>
+    <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+    <button mat-button [mat-dialog-close]="true">Cancel</button>
+  </mat-dialog-actions>
+</form>
+
+<form *ngIf="data.type === 'course'" class="update-object-form" #updateObjectForm="ngForm"
+  (ngSubmit)="onUpdateClick(updateObjectForm.value)">
+  <mat-dialog-content>
+    <mat-form-field class="update-object-full-width"><input type="text" matInput placeholder="name" name="name" ngModel>
+    </mat-form-field>
+    <mat-form-field class="update-object-full-width"><input type="text" matInput placeholder="instructor"
+        name="instructor" ngModel>
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button type="submit">Add</button>
+    <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+    <button mat-button [mat-dialog-close]="true">Cancel</button>
+  </mat-dialog-actions>
+</form>
+
+<form *ngIf="data.type === 'test'" class="update-object-form" #updateObjectForm="ngForm"
+  (ngSubmit)="onUpdateClick(updateObjectForm.value)">
+  <mat-dialog-content>
+    <mat-form-field class="update-object-full-width"><input type="text" matInput placeholder="course id"
+        name="course_id" ngModel>
+    </mat-form-field>
+    <mat-form-field class="update-object-full-width"><input type="text" matInput placeholder="question" name="question"
+        ngModel>
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button type="submit">Add</button>
+    <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+    <button mat-button [mat-dialog-close]="true">Cancel</button>
+  </mat-dialog-actions>
+</form>

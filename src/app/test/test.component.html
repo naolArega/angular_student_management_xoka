@@ -1,0 +1,18 @@
+<div class="object-container">
+  <h2>Tests</h2>
+  <button mat-raised-button color="primary" (click)="openAddDialog()">Add test</button>
+  <ul *ngIf="tests">
+    <li *ngFor="let test of tests">
+      <h2 class="test-id">test id | {{ test.test_id }} </h2>
+      <span class="course-id">course id | {{ test.course_id }} </span>
+      <span class="question">question | {{ test.question }} </span>
+      <button mat-icon-button color="primary" aria-label="Example icon-button with a edit icon"
+        (click)="openUpdateDialog()">
+        <mat-icon>mode_edit</mat-icon>
+      </button>
+      <button mat-icon-button color="primary" aria-label="Example icon-button with a delete icon">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </li>
+  </ul>
+</div>

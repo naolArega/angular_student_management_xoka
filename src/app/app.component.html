@@ -1,3 +1,13 @@
-<button routeLink="/">Home</button>
+<mat-toolbar>
+  <mat-icon>home</mat-icon>
+  <span>Student Management with angular</span>
+  <span class="header-spacer"></span>
+  <div class="pages-btns">
+    <a mat-flat-button color="primary" href="#" routerLink="/student">Student</a>
+    <a mat-flat-button color="primary" href="#" routerLink="/class">Class</a>
+    <a mat-flat-button color="primary" href="#" routerLink="/course">Course</a>
+    <a mat-flat-button color="primary" href="#" routerLink="/test">Test</a>
+  </div>
+</mat-toolbar>
 
 <router-outlet></router-outlet>
